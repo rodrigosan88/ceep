@@ -42,9 +42,9 @@ body{
     }  
     
     .mural--linhas .cartao{
-        display: block;
+        flex-direction: auto;
         width: auto;
-        flex-basis: auto;
+        display: block;
     }
     
     .mural--linhas{

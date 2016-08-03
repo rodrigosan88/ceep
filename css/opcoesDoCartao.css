@@ -31,6 +31,7 @@
 
 .opcoesDoCartao-remove {
 	background-image: url("../img/close.svg");
+    transition: 0.2s ease-in;
 }
 
 .opcoesDoCartao-remove:hover {

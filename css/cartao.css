@@ -7,6 +7,7 @@
 	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
 	background: #EBEF40;
 	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+    transition: 0.2s ease-in-out;
 }
 
 .cartao:hover{

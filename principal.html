@@ -17,11 +17,22 @@
     <header class="cabecalho container">
         <h1 class="cabecalho-logo">Creep!</h1>
         <div class="opcoesDaPagina">
+            <input type="search" id="busca" placeholder="Busca" class="opcoesDaPagina--opcao">  
             <button id="botaoMudaLayout" class="opcoesDaPagina-opcao opcoesDaPagina-botao">Linhas</button>
         </div>
     </header>
     <form action="" class="container novoCartao">
         <textarea name="" id="" cols="30" rows="10" class="novoCartao-conteudo" placeholder="Digite aqui"></textarea>
+        <ul class="opcoesDoCartao-opcao opcaoAmarelo">
+            <li class="opcoesDoCartao-opcao opcaoAmarelo">
+                <input type="radio" name="cor" id="cor_1" >
+                <label for="cor_1" class="opcoesDoCartao-opcao"></label>
+            </li>
+            <li class="opcoesDoCartao-opcao opcaoAmarelo">
+                <input type="radio" name="cor" id="cor_2" >
+                <label for="cor_2" class="opcoesDoCartao-opcao"></label>
+            </li>        
+        </ul>
         <input type="submit" value="Salvar" class="novoCartao-salvar">
     </form>
     <section class="container mural">

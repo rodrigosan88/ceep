@@ -25,24 +25,6 @@
 	background-repeat: no-repeat;
 }
 
-.opcaoAmarelo{
-    background-color: darkgoldenrod;
-}
-
-.opcaoAmarelo input:checked{
-    background-color: red;
-    outline: 4px solid #21b4d0;
-}
-
-input[type=radio]:checked + opcaoAmarelo:before {
-    content: "\2022";
-    color: #f3f3f3;
-    font-size: 30px;
-    text-align: center;
-    line-height: 18px;
-    background-color: red;
-}
-
 .opcoesDoCartao-opcao + .opcoesDoCartao-opcao {
 	margin-left: .5em;
 }

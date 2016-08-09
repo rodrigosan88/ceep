@@ -6,13 +6,28 @@
 	word-wrap: break-word;
 	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
 	background: #EBEF40;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
-    transition: 0.2s ease-in-out;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.1);
 }
 
-.cartao:hover{
-    box-shadow: 10px 10px 5px #888888;
+.cartao .opcoesDoCartao-opcao{
+    transition: opacity 0.2s ease;
+    opacity: 0;
+}
+
+.cartao:hover .opcoesDoCartao-opcao,
+.cartao:focus .opcoesDoCartao-opcao,
+.cartao .opcoesDoCartao:focus .opcoesDoCartao-opcao,
+.cartao .opcoesDoCartao-opcao:focus
+{
     transition: 0.2s ease-in;
+    opacity: 1;
+}
+
+.cartao:focus,
+.cartao:hover{
+    outline: none;
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
 }
 
 @media (min-width: 560px){

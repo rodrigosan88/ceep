@@ -25,3 +25,9 @@
 .closebtn:hover {
     color: black;
 }
+
+.quadroAlert{
+    bottom: 0;
+    position: fixed;
+    z-index: 1;
+}

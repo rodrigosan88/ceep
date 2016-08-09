@@ -32,7 +32,7 @@ $.getJSON(
         var cartoes = res.cartoes;
         apresentaMensagem(cartoes.length + ' carregados em ' + res.usuario ,'info');
         cartoes.forEach(function(cartao){
-            controladorDeCartoes.adicionaCartao(cartao.conteudo);   
+            controladorDeCartoes.adicionaCartao(cartao.conteudo, cartao.cor);   
         });
     }
 );

@@ -14,6 +14,7 @@
         $('.cartao').each(function(){
             var cartao = {};
             cartao.conteudo = $(this).find('.cartao-conteudo').html();
+            cartao.cor = $(this).find('.cartao-conteudo').context.style.backgroundColor;
             cartoes.push(cartao);
         });
 

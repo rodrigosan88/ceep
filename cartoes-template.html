@@ -1,0 +1,11 @@
+<script id="cartoes-template" type="text/x-mustache-template">
+    <div class="cartao {{cartao.tipo}}" id="{{cartao.id}}" style="background-color: {{cartao.cor}}">
+        <div class="opcoesDoCartao">
+            <button class="opcoesDoCartao-opcao opcoesDoCartao-remove" data-cartao="{{cartao.id}}">Remover</button>
+            <div class="opcoesDoCartao-cores"> {{#cores}}
+                <input type="radio" class="opcoesDoCartao-radioCor" name="corDoCartao-{{cartao.id}}" id="cor{{nome}}-{{cartao.id}}" value="{{codigo}}">
+                <label class="opcoesDoCartao-opcao opcoesDoCartao-cor" for="cor{{nome}}-{{cartao.id}}" style="color: {{codigo}}">{{nome}}</label> {{/cores}} </div>
+        </div>
+        <p class="cartao-conteudo" contenteditable>{{cartao.conteudo}}</p>
+    </div>
+</script>

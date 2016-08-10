@@ -1,7 +1,8 @@
 var controladorDeCartoes = (function(){
     
     var contadorCartoes = $('.cartao').length;
-
+    //$('.mural').on('click','.opcoesDoCartao-remove', criaOpcoesDoCartao);
+    
     function decideTipoCartao(conteudo){
         var quebras = conteudo.split("<br>").length;
         var totalDeLetras = conteudo.replace(/<br>/g, ' ').length;
@@ -40,6 +41,23 @@ var controladorDeCartoes = (function(){
             .append(conteudoTag)
             .css('background-color', cor)
             .prependTo('.mural').fadeIn();
+        /*var contexto = {
+            cartao: {
+                id:"cartao_" + contadorCartoes,
+                tipo: tipoCartao,
+                cor: cor,
+                conteudo: conteudo
+            },
+            cores: [
+                {nome: 'Padrao', codigo:'#EBEF40'},
+                {nome: 'Importante', codigo:'#F05450'},
+                {nome: 'Tarefa', codigo:'#92C4EC'},
+                {nome: 'Inspiracao', codigo:'#76EF40'}
+            ]
+        };
+        var template = $('#cartoes-template').html();
+        var templateRenderizado = Mustache.render(template,contexto);
+        $('.mural').prepend(templateRenderizado);*/
         $(document).trigger('precisaSincronizar');
         apresentaMensagem('Um novo cartao foi adicionado!!','success');
     }
@@ -50,6 +68,16 @@ var controladorDeCartoes = (function(){
             return contadorCartoes;
         }
     
+    }
+    
+    function removeCartao(){
+        var cartao = document.querySelector('#cartao_' + this.dataset.ref);
+        cartao.classList.add('cartao--some');
+        setTimeout(function(){
+            cartao.remove();
+            $(document).trigger('precisaSincronizar');
+        }, 400);
+        apresentaMensagem('Um cartao foi removido de seu mural','');
     }
     
 })();
